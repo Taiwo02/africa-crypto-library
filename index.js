@@ -1,3 +1,5 @@
 "use stric"
 COINBASE_KEY=vImPPdo30fy282GB
 COINBASE_SECRET=jvwjHU6HQNRCeUefxol2haChB4gEPCVJ
+private_key = lv_sec_GfINYaasvlLLGCAvjrcZWOlKERtU0y
+public_key =lv_pub_6lKZDlUbHJGJA5Q25T5IGdRrTWIQuQ
