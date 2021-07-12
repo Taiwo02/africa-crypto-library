@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Flutterwave" height="100" src="assets/paycoins.png" width="50%"/>
+    <img title="Paycoins" height="350" src="assets/paycoins.png" width="70%"/>
 </p>
 
 # Paycoins Nodejs Library
