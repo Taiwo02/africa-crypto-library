@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Paycoins" height="350" src="assets/paycoins.png" width="70%"/>
+    <img title="Paycoins" height="200" src="assets/paycoins.png" width="30%"/>
 </p>
 
 # Paycoins Nodejs Library
