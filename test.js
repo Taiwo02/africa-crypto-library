@@ -17,5 +17,45 @@ const getInvoice = async () => {
         console.log(error)
     }
 }
-getInvoice();
+// getInvoice();
 
+
+const createInvoice = async () => {
+    try {
+        const payload = {
+            "amount": 1000,
+            "currency": "NGN",
+            "redirect_url": "https://bcoin.com",
+            "customer": {
+                "firstname": "sdk",
+                "lastname": "node",
+                "email": "sdknodesetup@example.com"
+            },
+            "customization": {
+               "title": "Sales"
+            }
+        }
+        const response = await paycoins.Invoice.createInvoice(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// createInvoice()
+
+const getInvoiceDetails = async () => {
+    try {
+        const payload ={
+            "id": "INV1608644446774"
+          }
+        const response = await paycoins.Invoice.getInvoiceDetails(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+getInvoiceDetails()
