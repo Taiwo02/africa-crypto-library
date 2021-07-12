@@ -58,4 +58,38 @@ const getInvoiceDetails = async () => {
     }
 }
 
-getInvoiceDetails()
+// getInvoiceDetails()
+
+const payout = async () => {
+    try {
+        const payload = {
+                "amount":0.001,
+                "address":"1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck",
+                "business_id": "4d54413d",
+                "wallet_id": "4d7a673d"
+        }
+        const response = await paycoins.Invoice.payout(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// payout()
+
+const checkoutout = async () => {
+    try {
+        const payload = {
+            "amount":0.002,
+            "address":"3GrCNuSg7825c2MssG8ZLwuZYuffuPsm8K"
+        }
+        const response = await paycoins.Invoice.checkout(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+checkoutout()
