@@ -1,15 +1,36 @@
 {
   "name": "africa-crypto-library",
-  "version": "1.0.0",
-  "description": "africa crypto library",
+  "version": "0.0.1",
+  "description": "A NodeJS Wrapper for Paycoins API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Taiwo",
+  "keywords": [
+    "paycoins",
+    "payments",
+    "nodejs",
+    "api-endpoints",
+    "rest-api",
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "usdt",
+    "coinbase"
+  ],
+  "author": "Taiwo Enoch",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Taiwo02/africa-crypto-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Taiwo02/africa-crypto-library/issues"
+  },
+  "homepage": "https://github.com/Taiwo02/africa-crypto-library#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "axios": "^0.21.1",
+    "q": "^1.5.1",
+    "request": "^2.88.2"
   }
 }

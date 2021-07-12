@@ -1,5 +1,13 @@
-"use stric"
-COINBASE_KEY=vImPPdo30fy282GB
-COINBASE_SECRET=jvwjHU6HQNRCeUefxol2haChB4gEPCVJ
-private_key = lv_sec_GfINYaasvlLLGCAvjrcZWOlKERtU0y
-public_key =lv_pub_6lKZDlUbHJGJA5Q25T5IGdRrTWIQuQ
+const BASE = require("./lib/paycoins.base"); 
+const invoice = require("./lib/paycoins.invoice");
+
+function Paycoins (public_key, secret_key) {
+    const paycoinsbase = new BASE(
+        public_key,
+        secret_key
+    );
+
+    this.Invoice = new invoice(paycoinsbase);
+};
+
+module.exports = Paycoins;
