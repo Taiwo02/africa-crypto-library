@@ -108,7 +108,7 @@ A sample response is:
 
 ### `.getInvoiceDetails()`
 
-Thi allow you to get a single invoice full details
+This allow you to get a single invoice full details
 
 ```javascript
 const Paycoins = require("paycoins-node");
@@ -180,7 +180,24 @@ const getInvoiceDetails = async () => {
         "message":"Invoice Details Fetched"
 }
 ```
+### `.getAllInvoices()`
 
+This allow you to get all list of available invoices in your wallet
+
+```javascript
+const Paycoins = require("paycoins-node");
+
+const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
+
+const getAllInvoices = async () => {
+  try {
+    const response = await paycoins.Invoice.getAllInvoices();
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
+```
 ### `.createInvoice()`
 
 This allow you to initiate an invoice for payment
