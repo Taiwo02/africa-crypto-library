@@ -4,9 +4,9 @@
 
 # Paycoins Nodejs Library
 
-![npm](https://img.shields.io/npm/dt/paycoins-node)
+<!-- ![npm](https://img.shields.io/npm/dt/paycoins-node) -->
 ![npm](https://img.shields.io/npm/v/paycoins-node)
-![NPM](https://img.shields.io/npm/l/paycoins-node)
+<!-- ![NPM](https://img.shields.io/npm/l/paycoins-node) -->
 
 ## Paycoins Services exposed by the library
 
