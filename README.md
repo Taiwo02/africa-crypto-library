@@ -23,7 +23,7 @@
 You can get your PUBLICK_KEY and SECRET_KEY from the Paycoins dashboard.
 
 ```
-const Paycoins = require('flutterwave-node');
+const Paycoins = require('paycoins-node');
 
 const paycoins = new Paycoins(PUBLICK_KEY, SECRET_KEY);
 ```
@@ -35,7 +35,7 @@ const paycoins = new Paycoins(PUBLICK_KEY, SECRET_KEY);
 This allows you to get a single paycoins invoice with it's ID
 
 ```javascript
-const Paycoins = require("flutterwave-node");
+const Paycoins = require("paycoins-node");
 
 const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
 
@@ -108,10 +108,10 @@ A sample response is:
 
 ### `.getInvoiceDetails()`
 
-Thi allow you to get a single invoice full details
+This allow you to get a single invoice full details
 
 ```javascript
-const Paycoins = require("flutterwave-node");
+const Paycoins = require("paycoins-node");
 
 const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
 
@@ -180,13 +180,30 @@ const getInvoiceDetails = async () => {
         "message":"Invoice Details Fetched"
 }
 ```
+### `.getAllInvoices()`
 
+This allow you to get all list of available invoices in your wallet
+
+```javascript
+const Paycoins = require("paycoins-node");
+
+const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
+
+const getAllInvoices = async () => {
+  try {
+    const response = await paycoins.Invoice.getAllInvoices();
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
+```
 ### `.createInvoice()`
 
 This allow you to initiate an invoice for payment
 
 ```javascript
-const Paycoins = require("flutterwave-node");
+const Paycoins = require("paycoins-node");
 
 const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
 
@@ -231,7 +248,7 @@ const createInvoice = async () => {
 This allow you to make trigger a payout/withdrawal function from your business wallet
 
 ```javascript
-const Paycoins = require("flutterwave-node");
+const Paycoins = require("paycoins-node");
 
 const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
 
@@ -272,7 +289,7 @@ const payout = async () => {
 Thi allow you accept payment into your business wallet through checkout
 
 ```javascript
-const Paycoins = require("flutterwave-node");
+const Paycoins = require("paycoins-node");
 
 const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
 
