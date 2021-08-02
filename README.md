@@ -14,6 +14,7 @@
 - Get Single Invoice By Invoive Ref
 - Get All Invoices
 - Create Invoice
+- Get current exchange rate of <b>1 NGN</b> to major other cryptos and fiat currencies
 
 ## How to use
 
@@ -251,5 +252,30 @@ const createInvoice = async () => {
   },
   error: false,
   message: 'Invoice Created'
+}
+```
+
+### Exchange Rates
+
+### `.getExchangeRates()`
+
+This allows you to get the current market exchange rate of <b>1 NGN</b> (Nigeria Naira) to all other cryptos and fiat currencies
+
+```javascript
+const Paycoins = require("paycoins-node");
+
+const paycoins = new Paycoins(PUBLIC_KEY, PRIVATE_KEY);
+
+const getExchangeRates = async () => {
+    try {
+        const payload ={
+            "currency": "NGN"
+          }
+        const response = await paycoins.ExchangeRates.getCurrencyExchangeRates(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
 }
 ```
